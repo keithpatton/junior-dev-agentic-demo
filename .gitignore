@@ -1,3 +1,10 @@
 output/playwright/
+output/talk/build/
+output/talk/Beyond-the-Prompt-JuniorDev/
+output/talk/renders-artifact/
+output/talk/.cache/
+output/talk/*.inspect.ndjson
+output/talk/*.webp
+output/talk/*-montage.png
 .playwright-cli/
 *.log
