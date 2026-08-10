@@ -6,4 +6,4 @@
 - Company and role are required; status comes from the supported stage set.
 - User-controlled text is escaped before HTML rendering.
 - Invalid JSON or a non-array storage value falls back safely.
-- Target: notes remain session-private and never appear in storage or downloads.
+- Notes remain session-private and never appear in storage or downloads; automated boundary tests enforce both destinations.

@@ -1,3 +1,5 @@
+import { durable, downloadable } from "./data-boundaries.js";
+
 const KEY = "apply-forward-v1",
   statuses = ["Wishlist", "Applied", "Screen", "Interview", "Offer"];
 const seed = [
@@ -39,7 +41,7 @@ function load() {
   }
 }
 function persist() {
-  localStorage.setItem(KEY, JSON.stringify(apps));
+  localStorage.setItem(KEY, JSON.stringify(durable(apps)));
 }
 function h(s = "") {
   return s.replace(
@@ -118,7 +120,7 @@ document.querySelector("#list").onclick = (e) => {
 document.querySelector("#export").onclick = () => {
   const a = document.createElement("a");
   a.href = URL.createObjectURL(
-    new Blob([JSON.stringify(apps, null, 2)], { type: "application/json" }),
+    new Blob([JSON.stringify(downloadable(apps), null, 2)], { type: "application/json" }),
   );
   a.download = "apply-forward.json";
   a.click();
