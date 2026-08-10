@@ -20,6 +20,25 @@ Implementation is intentionally agent-authored. The presenter supplies goals, an
 
 Elapsed phase time includes agent reasoning, file changes, test execution, browser verification, and ordinary recovery. It excludes setup of this validation harness and the final comparative analysis. Git commits mark equivalent phase checkpoints.
 
+## Live guardrails and nudge ladder
+
+The presenter keeps the broad talk prompt, but the rehearsal uses these safety rails so “work end to end” has a bounded meaning:
+
+- **Technical box:** local, single-user browser app; no sign-in, network API, package selection, deployment, or cloud database.
+- **Phase 1 stop:** add, change status, and delete work in a browser; visual polish is good enough to read on a projector.
+- **Phase 2 stop:** one next action is visible and its reasoning changes when application data changes.
+- **Phase 3 stop:** name the storage, UI, decision-policy, and export seams; state their contracts and at least three plausible failures.
+- **Phase 4 stop:** four short context documents agree with observable behaviour; no exhaustive documentation.
+- **Phase 5 stop:** the privacy test fails for the old design, passes after the fix, and a reload proves notes disappeared while ordinary application data remained.
+
+If the agent wanders, the presenter uses at most one nudge at a time and does not write the solution:
+
+1. **Scope nudge:** “Keep this local and single-user. Optimise for a reliable two-minute product walkthrough.”
+2. **Evidence nudge:** “Stop expanding scope. Exercise the promised path in the browser and report what actually worked.”
+3. **Recovery nudge:** “Return to the last phase checkpoint. Make the smallest change that satisfies this phase’s stop condition.”
+
+The run log records every nudge. In the live talk, checkpoints—not extra prompting skill—are the fallback.
+
 ## Quality rubric (0–2 each; 10 maximum)
 
 - **Functional:** 0 broken; 1 primary path works with gaps; 2 primary path plus phase-specific behaviour verified.
@@ -29,4 +48,3 @@ Elapsed phase time includes agent reasoning, file changes, test execution, brows
 - **Presenter usability:** 0 unsafe live; 1 usable with explanation or recovery; 2 clear actions, deterministic reveal, and a checkpoint.
 
 A phase is live-demo viable only if its functional and presenter-usability scores are both at least 1. The full demo is considered reliable enough only if all 15 phases are viable, no phase requires human-authored implementation, and the validated talk path fits 25–26 minutes before questions.
-
