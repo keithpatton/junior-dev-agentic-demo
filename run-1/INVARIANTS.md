@@ -13,7 +13,7 @@
 - Status belongs to the five supported stages.
 - User-provided text is escaped before HTML insertion.
 - A failed or malformed storage read falls back safely rather than preventing the app from loading.
-- **Proposed privacy invariant:** free-text notes are session-private and never cross persistent-storage or export boundaries.
+- Free-text notes are session-private and never cross persistent-storage or export boundaries. Automated boundary tests enforce both paths.
 
 ## Demo invariant
 

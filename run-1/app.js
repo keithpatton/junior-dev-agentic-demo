@@ -1,3 +1,5 @@
+import {forPersistence,forExport} from './storage.js';
+
 const STORAGE_KEY = 'next-move-applications-v1';
 const seed = [
   {id:crypto.randomUUID(),company:'Kōwhai Labs',role:'Graduate Developer',status:'Interview',deadline:'2026-08-13',nextAction:'Prepare three product questions',notes:'Met Hana at the community meetup.'},
@@ -7,7 +9,7 @@ const seed = [
 let applications = load();
 
 function load(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)) || seed}catch{return seed}}
-function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(applications))}
+function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(forPersistence(applications)))}
 function escapeHtml(value=''){return value.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
 function formatDate(value){if(!value)return 'No date set';return new Intl.DateTimeFormat('en-NZ',{day:'numeric',month:'short'}).format(new Date(value+'T12:00:00'))}
 function recommendation(){
@@ -43,5 +45,5 @@ document.querySelector('#application-form').addEventListener('submit',event=>{
 });
 document.querySelector('#ledger').addEventListener('change',event=>{if(!event.target.matches('.status'))return;const app=applications.find(x=>x.id===event.target.closest('.card').dataset.id);app.status=event.target.value;save();render()});
 document.querySelector('#ledger').addEventListener('click',event=>{if(!event.target.matches('.danger'))return;applications=applications.filter(x=>x.id!==event.target.closest('.card').dataset.id);save();render()});
-document.querySelector('#export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(applications,null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='next-move-applications.json';link.click();URL.revokeObjectURL(link.href)});
+document.querySelector('#export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(forExport(applications),null,2)],{type:'application/json'});const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='next-move-applications.json';link.click();URL.revokeObjectURL(link.href)});
 render();
