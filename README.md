@@ -1,5 +1,7 @@
 # JuniorDev live-demo validation
 
+Presenting or rehearsing the talk? Start with [START-HERE.md](START-HERE.md).
+
 This workspace records three empirical rehearsals of a five-phase, agentic-first product-building demo. Each run starts in its own empty directory and uses the same product brief, presenter answers, inspection request, documentation request, and privacy invariant.
 
 ## Fixed product brief
