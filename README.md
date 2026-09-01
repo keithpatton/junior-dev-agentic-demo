@@ -1,37 +1,25 @@
-# Apply / Forward
+# Product journey starting point
 
-This repository is both a small job-application product and the evidence base for the JuniorDev Auckland talk **Beyond the Prompt**.
+This branch is the clean starting point for the JuniorDev Auckland talk **Beyond the Prompt**.
 
-The application is the product. The talk follows its real journey from an incomplete idea to an approved, implemented, challenged, proved, and remembered system change.
+The product has not been designed or implemented. Its entire seed is:
+
+> Build a job application tracker for junior developers.
 
 > **The valuable unit of agentic engineering is not the prompt. It is the loop.**
 
-## Run the application
-
-The finished application lives at the repository root.
-
-```bash
-npm test
-npx serve .
-```
-
-Then open the local URL printed by the server.
-
-The product helps a junior developer answer **“What should I do next?”** across active job applications. Personal notes are session-private and are excluded from persistence and download boundaries.
-
-## Start the recorded journey
+## Start here
 
 Open [`presentation/journey/prompts/00-start.md`](presentation/journey/prompts/00-start.md) and give that prompt to the coding agent.
 
-The agent must interrogate the product idea, update the journey log, create and challenge a plan, and stop for human approval before implementation. Later phases add implementation review, proof, and a curated context-spine update.
+The agent must interrogate the product idea, update the journey log, create and challenge a plan, and stop for human approval before implementation. Later prompts add implementation review, proof, and a curated context-spine update.
+
+Do not inspect the finished `main` branch, historical rehearsal applications, validation runs, deck content, or final screenshots while planning. They are sealed fallbacks, not product requirements.
 
 ## Repository map
 
 ```text
 .
-├── index.html, app.js, styles.css    # finished Apply / Forward product
-├── data-boundaries.js                # privacy projections
-├── privacy.test.js                   # executable privacy evidence
 ├── AGENTS.md                         # model-agnostic routing instructions
 ├── docs/
 │   ├── spine/                        # current product and system meaning
@@ -39,13 +27,13 @@ The agent must interrogate the product idea, update the journey log, create and 
 │   └── validation/                   # empirical rehearsal results
 ├── plans/                            # reusable Task Automation Framework
 ├── presentation/
-│   ├── Beyond-the-Prompt-JuniorDev.pptx
+│   ├── Beyond-the-Prompt-JuniorDev.pptx  # sealed talk fallback during discovery
 │   ├── SPEAKER-GUIDE.md
 │   ├── journey/                      # real prompts, discussion, decisions and evidence
 │   ├── planning/                     # talk-specific planning trail
 │   ├── assets/                       # presentation-only imagery and screenshots
 │   └── rehearsal/                    # historical prepared states
-└── validation/runs/                  # independent empirical validation runs
+└── validation/runs/                  # sealed empirical validation archive
 ```
 
 ## The lifecycle
@@ -65,3 +53,5 @@ Use the full loop for ambiguous, consequential, risky, cross-cutting, or resumab
 - that code-level knowledge no longer matters.
 
 The repo-owned layer adds portable context, tailored gates, explicit decision ownership, and a durable record around whichever model performs the implementation.
+
+The finished, verified application remains available on `main` as the presentation fallback.

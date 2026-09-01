@@ -18,7 +18,7 @@
 
 `READY FOR PRODUCT INTERROGATION`
 
-No product plan has been approved. The existing root application is a validated rehearsal endpoint and fallback; it must not be presented as the output of the new recorded journey until the journey reaches implementation and proof.
+No product plan has been approved and no root application exists on this branch. The finished `main` branch and rehearsal archive are sealed fallbacks; do not inspect or present them as the output of this recorded journey.
 
 ### Next action
 

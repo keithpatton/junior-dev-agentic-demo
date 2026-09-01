@@ -2,6 +2,19 @@
 
 This file is the entry point, not the whole context. Keep it short enough to remain useful.
 
+## Journey-branch guardrail
+
+This branch begins with one unvalidated product idea: **build a job application tracker for junior developers**.
+
+During interrogation, planning, challenge, and approval:
+
+- do not inspect Git history, `main`, the final deck, presentation images, `presentation/rehearsal/`, or `validation/runs/`;
+- do not infer product requirements from prepared fallback material;
+- treat `presentation/journey/` as the only talk-specific working record;
+- stop before implementation until the human explicitly approves the challenged plan.
+
+These boundaries make the journey repeatable and keep the product conversation authentic.
+
 ## Read first
 
 1. Read [`docs/spine/README.md`](docs/spine/README.md).
@@ -44,7 +57,7 @@ Do not silently resolve a product, privacy, security, or architecture decision f
 | How the repository is changed and proved | `docs/spine/WORKFLOW.md` |
 | Formal task lifecycle | `plans/README.md` |
 | Recorded product journey | `presentation/journey/README.md` |
-| Historical rehearsal states | `presentation/rehearsal/stages/README.md` |
+| Historical rehearsal states | Sealed until the recorded journey is complete |
 
 ## Model independence
 

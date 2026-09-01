@@ -10,4 +10,5 @@ These are the repository’s “physics”: rules that should remain true across
 6. **The framework is model-agnostic.** Core behaviour is expressed in Markdown and filesystem conventions, not one provider’s hidden state.
 7. **Complexity must earn its cost.** Trivial work may bypass the formal lifecycle; material or ambiguous work may not bypass it silently.
 8. **Prepared demo states remain reproducible.** A talk never depends on cold generation or network access.
-9. **Private notes remain private in App C.** Free-text notes are neither persisted nor exported, and this claim is executable.
+
+No product-specific invariant has been approved. Candidate privacy, data, behaviour, and failure-mode invariants must emerge from interrogation and plan challenge, then be explicitly approved and proved.

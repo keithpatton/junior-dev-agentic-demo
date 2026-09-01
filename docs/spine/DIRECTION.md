@@ -2,16 +2,14 @@
 
 ## Current focus
 
-Publish the simplest useful form of the agentic engineering loop and demonstrate it through prepared evidence rather than live generation.
+Interrogate the job-application idea until there is enough shared understanding to propose and challenge a bounded product plan.
 
 ## Direction of travel
 
-- from one prompt to an explicit, inspectable lifecycle;
-- from passive tracking to a user decision and outcome;
-- from whole-object convenience to explicit data boundaries;
-- from plausible output to layered evidence;
-- from transient chat context to a maintained repository spine;
-- from code producer to agentic builder with broader systems leverage.
+- from a broad request to an explicit intended outcome;
+- from hidden assumptions to visible decisions and boundaries;
+- from a plausible plan to a challenged and approved execution contract;
+- after approval, from implementation to layered evidence and durable learning.
 
 ## Deliberate deferrals
 
