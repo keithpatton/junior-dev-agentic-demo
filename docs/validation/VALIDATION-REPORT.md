@@ -2,9 +2,9 @@
 
 ## Verdict
 
-**Reliable enough for a live talk when run as a checkpointed narrative, not as an unbounded build.** All 15 phases met their stop condition and no presenter nudge or human-authored implementation/documentation was required. Median end-to-end agent/browser work was **3:04.664**; the worst run was **4:01.449**.
+**Reliable enough to support a live talk as a recorded, checkpointed narrative—not as an unbounded live build.** All 15 rehearsal phases met their stop condition and no presenter nudge or human-authored implementation/documentation was required. Median end-to-end agent/browser work was **3:04.664**; the worst run was **4:01.449**.
 
-The evidence does not support betting the talk on a completely cold environment. Run 1 lost time to preview startup policy, and its privacy change passed unit tests before breaking browser module loading. The venue setup must pre-open the local server and browser, and every live phase must have a known-good tag ready.
+The evidence does not support betting the talk on a completely cold environment. Run 1 lost time to preview startup policy, and its privacy change passed unit tests before breaking browser module loading. The final talk therefore uses prepared journey artifacts, a pre-opened browser, and an optional 30-second test run.
 
 ## Comparative timing
 
@@ -32,30 +32,32 @@ These clocks include agent changes, tests, browser verification, and ordinary re
 | Risk | Evidence | Stage treatment | Fallback |
 |---|---|---|---|
 | Local preview fails to start | Run 1 background process was blocked. | Pre-open during tech check; do not start a server live. | Keep final app open in a browser tab and screenshots in the deck. |
-| Cold build expands scope or varies visually | Only three runs; same agent benefits from rehearsal learning. | Spoken prompt stays broad, technical box and stop condition live in repo context. | At 90 seconds use the scope nudge; at 120 seconds reveal `run-3-phase-1`. |
+| Cold build expands scope or varies visually | Only three runs; same agent benefits from rehearsal learning. | Do not cold-build on stage; show the recorded interrogation, plan, challenge and finished product. | Use `presentation/rehearsal/stages/app-c-proven/` or the final screenshot. |
 | Agent edit needs self-recovery | Run 2/3 phase 2 and run 3 phase 5 had context misses. | Let the agent recover while continuing the narrative; do not narrate patch mechanics. | Switch to the next phase tag if the visible result is not ready by its cue. |
-| Unit test passes while browser is broken | Run 1 privacy module MIME failure. | Always finish privacy with browser reload proof. | Keep `run-3-phase-5` open; show saved company and absent secret via the prepared evidence. |
+| Unit test passes while browser is broken | Run 1 privacy module MIME failure. | Explain why executable and browser evidence are both needed. | Show the prepared browser evidence and root privacy tests. |
 | Browser state is contaminated by rehearsal | Local storage survives refresh. | Use a fresh browser profile/private window for the talk. | Use seeded final tab or clear site data during tech check. |
 | Network styling fails | Run 1 used remote fonts; runs 2/3 did not. | Use run 3 as the live path because its core presentation is local. | Deck contains a final-state screenshot. |
 | Export download is blocked or distracting | Browser permissions vary and download is not central to the thesis. | Do not download on stage; discuss export as a seam. | Show the boundary test result instead. |
 
-## Validated 30-minute map
+## Original live-build timing map
+
+This was the format used to validate the agent phases. It is retained as historical evidence, not as the recommended presentation plan. The current 30-minute plan is in `presentation/SPEAKER-GUIDE.md` and replaces live generation with selected recorded artifacts.
 
 | Clock | Segment | Live action / checkpoint |
 |---|---|---|
 | 0:00–1:30 | **Promise:** idea → product → reframe → inspect → context → invariant, without writing implementation code. | No tools. Establish that the audience will see the complete loop. |
 | 1:30–3:30 | The role moves up a level: print worker → digital editor; software engineer → product builder. | Slides. Define curiosity about systems as the durable skill. |
 | 3:30–4:15 | Name the job-search problem and the bounded technical box. | Open Codex and paste phase 1 prompt. |
-| 4:15–6:15 | While phase 1 runs: code is cheap; context, constraints, and evidence carry the work. | If not ready at 5:45, use scope nudge. At 6:15 switch to `run-3-phase-1`. |
+| 4:15–6:15 | While phase 1 runs: code is cheap; context, constraints, and evidence carry the work. | If not ready at 5:45, use scope nudge. At 6:15 switch to the prepared run 3 phase 1 artifact. |
 | 6:15–7:45 | Reveal the working tracker; add/change/delete one record only if already stable. | Browser tab or phase 1 checkpoint. |
 | 7:45–10:15 | Product interrogation: tracking was the request; deciding the next 30 minutes is the need. | Paste phase 2 prompt and the three fixed answers; reveal changed recommendation. |
 | 10:15–12:45 | Systems thinking without line review. | Paste phase 3 inspection prompt; point to storage, decision, render, and export seams. |
 | 12:45–14:15 | Context is part of the product. | Paste phase 4 prompt; reveal the four-document spine, then move on. |
-| 14:15–19:15 | Privacy invariant: make the promise executable. | Paste phase 5 prompt. Show red test, green test, then browser reload proof. Switch to `run-3-phase-5` by 18:15 if needed. |
+| 14:15–19:15 | Privacy invariant: make the promise executable. | Paste phase 5 prompt. Show red test, green test, then browser reload proof. Switch to the prepared run 3 phase 5 evidence by 18:15 if needed. |
 | 19:15–22:00 | What the human did: frame, question, choose risk, demand evidence, steer the loop. | Slides recap the interaction rather than the code. |
 | 22:00–25:30 | Practical starting loop and close: goal → boundaries → evidence → context → invariant. | Re-state the opening promise and invite one small agent-owned workflow this week. |
 | 25:30–30:00 | Questions | **4:30 reserved.** Final slide keeps the five-step loop visible. |
 
 ## Conclusion
 
-The technically safest live path is **run 3**, with its local-only visual dependencies and complete checkpoint chain. The most valuable unscripted moment is the product reframe; the most valuable engineered moment is the privacy invariant. Phase 4 is reliable but visually low-drama, so it should be a brief reveal. Phase 5 should never be allowed to consume the close: its final checkpoint is mandatory.
+The technically safest evidence path is **run 3**, preserved under `validation/runs/run-3/`, with local-only visual dependencies and a complete checkpoint chain. The most valuable conversational moment is the product reframe; the most valuable engineered moment is the privacy invariant. Context-spine updates are reliable but visually low-drama, so they should be a brief reveal. The privacy proof should never be allowed to consume the close: use the prepared evidence if the optional test run misbehaves.
