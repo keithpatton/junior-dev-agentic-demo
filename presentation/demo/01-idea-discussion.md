@@ -15,7 +15,7 @@ That sentence was useful enough to begin a conversation and too incomplete to au
 - What would make a recommendation trustworthy rather than authoritative-looking?
 - What is the smallest result we can prove locally?
 
-## Decisions from the discussion
+## Decisions captured by the example discussion
 
 - The user is one early-career developer managing several active applications.
 - The difficult moment is deciding where to spend the next 30 minutes.

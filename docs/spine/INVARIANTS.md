@@ -9,5 +9,4 @@ These are the repository’s “physics”: rules that should remain true across
 5. **The spine describes the present.** Historical debate belongs in the plan trail, not in current context files.
 6. **The framework is model-agnostic.** Core behaviour is expressed in Markdown and filesystem conventions, not one provider’s hidden state.
 7. **Complexity must earn its cost.** Trivial work may bypass the formal lifecycle; material or ambiguous work may not bypass it silently.
-8. **Prepared demo states remain reproducible.** A talk never depends on cold generation or network access.
-9. **Private notes remain private in App C.** Free-text notes are neither persisted nor exported, and this claim is executable.
+8. **Private notes remain private in the finished application.** Free-text notes are neither persisted nor exported, and this claim is executable.

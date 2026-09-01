@@ -1,4 +1,0 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {persistentRecords,exportableRecords} from './boundaries.js';
-const record={id:'1',company:'Paper Kite',role:'Graduate Engineer',status:'Screen',deadline:'2026-08-16',nextAction:'Research creator tools',notes:'PRIVATE-CONTEXT'};
-for(const [name,project] of [['storage',persistentRecords],['export',exportableRecords]])test(`notes do not cross the ${name} boundary`,()=>{const result=project([record])[0];assert.equal(Object.hasOwn(result,'notes'),false);assert.equal(JSON.stringify(result).includes('PRIVATE-CONTEXT'),false)});
-test('decision-relevant fields survive projection',()=>{for(const project of [persistentRecords,exportableRecords]){const result=project([record])[0];assert.equal(result.company,'Paper Kite');assert.equal(result.status,'Screen');assert.equal(result.nextAction,'Research creator tools')}});

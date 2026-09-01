@@ -22,7 +22,7 @@ This file separates what the talk can safely claim from what remains an emerging
 
 **Safe talk wording:** In controlled experiments, structured debate between model instances improved performance on several reasoning tasks and reduced factual errors.
 
-**Primary source:** [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://arxiv.org/abs/2305.14325), Du et al., 2023.
+**Primary source:** [Improving Factuality and Reasoning in Language Models through Multiagent Debate](https://proceedings.mlr.press/v235/du24e.html), Du et al., ICML 2024.
 
 **Limit:** This supports debate as a promising technique, not “more agents equals truth.”
 
@@ -46,7 +46,7 @@ This file separates what the talk can safely claim from what remains an emerging
 
 **Safe talk wording:** Industry guidance recommends evaluator–optimizer workflows when evaluation criteria are clear and iterative feedback provides demonstrable value.
 
-**Primary practitioner source:** [Building effective agents](https://www.anthropic.com/research/building-effective-agents), Anthropic, 2024.
+**Primary practitioner source:** [Building effective agents](https://www.anthropic.com/engineering/building-effective-agents), Anthropic, 2024.
 
 **Limit:** This is experience-based engineering guidance, not a peer-reviewed comparative software-engineering trial.
 

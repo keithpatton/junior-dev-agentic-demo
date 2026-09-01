@@ -2,7 +2,7 @@
 
 ## Current focus
 
-Publish the simplest useful form of the agentic engineering loop and demonstrate it through prepared evidence rather than live generation.
+Maintain the simplest useful form of the agentic engineering loop around a small working application, with inspectable decisions, explicit boundaries, executable evidence, and durable context.
 
 ## Direction of travel
 
@@ -22,4 +22,4 @@ Publish the simplest useful form of the agentic engineering loop and demonstrate
 - issue tracker and deployment integration;
 - a complete organisational multi-agent operating model.
 
-These may be valuable later. They would dilute a 30-minute introductory session now.
+These may be valuable later. They are not required to preserve the core portable loop now.

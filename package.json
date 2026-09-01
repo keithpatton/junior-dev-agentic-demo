@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "start": "npx serve .",
-    "test": "node --test privacy.test.js docs/spine/spine.guard.test.js",
-    "test:spine": "node --test docs/spine/spine.guard.test.js"
+    "test": "node --test privacy.test.js docs/spine/spine.guard.test.js repository.guard.test.js",
+    "test:spine": "node --test docs/spine/spine.guard.test.js",
+    "test:repo": "node --test repository.guard.test.js"
   }
 }

@@ -43,8 +43,8 @@ Do not silently resolve a product, privacy, security, or architecture decision f
 | Current direction and deliberate deferrals | `docs/spine/DIRECTION.md` |
 | How the repository is changed and proved | `docs/spine/WORKFLOW.md` |
 | Formal task lifecycle | `plans/README.md` |
-| Recorded product journey | `presentation/journey/README.md` |
-| Historical rehearsal states | `presentation/rehearsal/stages/README.md` |
+| Prepared talk examples | `presentation/demo/README.md` |
+| Presenter timing and cues | `presentation/SPEAKER-GUIDE.md` |
 
 ## Model independence
 
