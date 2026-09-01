@@ -82,7 +82,7 @@ Do not add more than two personal stories. The demo is already the narrative spi
 ## Clone and rehearse
 
 ```powershell
-git clone https://github.com/Keith-Patton_Serko/junior-dev-agentic-demo.git
+git clone https://github.com/keithpatton/junior-dev-agentic-demo.git
 cd junior-dev-agentic-demo
 git tag --list
 npm --prefix run-3 test
