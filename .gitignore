@@ -1,4 +1,5 @@
 output/
+.tmp/
 .playwright-cli/
 node_modules/
 *.log

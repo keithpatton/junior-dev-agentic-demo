@@ -29,6 +29,16 @@ The planning trail under `/plans` records how that meaning evolved. Git records 
 
 This separation matters. A giant agent prompt drifts and becomes hard to govern. A small route into focused, versioned sources is easier for humans and different models to inspect.
 
+## Mechanical guard
+
+The spine is not trusted merely because it looks organised. Run:
+
+```bash
+npm run test:spine
+```
+
+The guard verifies that the required spine sources exist, remain routed from `AGENTS.md`, and do not contain broken relative Markdown links. It cannot prove that the prose is wise or current; human and agent review still own meaning.
+
 ## Pruning rule
 
 Add something to the spine only when forgetting it would predictably cause a future task to make a wrong product, architecture, safety, or workflow decision.

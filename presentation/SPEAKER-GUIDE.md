@@ -3,86 +3,105 @@
 ## Talk contract
 
 - Total: 30 minutes.
-- Content ends: 25:30.
-- Questions: 4:30.
-- Product: the root Apply / Forward application.
-- Primary demo: prepared product behaviour and recorded journey artifacts.
-- No live generation.
-- Optional live proof: `npm test`, capped at 30 seconds.
+- Finish the story by 25:30; reserve 4:30 for questions.
+- This is not a live-coding talk and not a catalogue of agent features.
+- The examples are evidence for one emerging way of working: shape, authorise, evaluate, remember.
+- Use a consistent rhythm: **SLIDE → SHOW ONE PIECE OF EVIDENCE → RETURN**.
+- Never remain outside the deck for more than 60–90 seconds.
+- The application reveal is optional and capped at 20 seconds: “Yes, agents can build software. Whoop-de-doo. The interesting part is how we stayed inside the decisions.”
 
 ## Opening promise
 
-> You already know an AI can produce code. In the next 25 minutes I’m going to show you how to let it build more without surrendering the decisions that make the result engineering.
+> You already know an AI can produce code. In the next 25 minutes I’m going to show you a way of working in which agents do more of the work while you keep hold of the decisions, the evidence and the meaning of the system.
 
-## Slide cues
+## The narrative thread
 
-| Time | Slide | Job | Core cue | Action / fallback |
+The talk is not “here are some techniques.” It is a progression in what the developer pays attention to:
+
+1. bring intent, consequences, constraints and unknowns;
+2. make a proposal inspectable before work begins;
+3. challenge it against criteria instead of merely chatting with it;
+4. authorise consequential choices;
+5. delegate implementation while retaining the decision frame;
+6. evaluate claims about outcomes, boundaries and reality;
+7. curate the rules and context inherited by the next cycle;
+8. move fluidly between building a feature up and strengthening the system across;
+9. become an agentic builder: more powerful because judgement is applied at system scale.
+
+## Slide → show → return
+
+| Time | Slide | Say | Show outside the deck | Return line |
 | --- | ---: | --- | --- | --- |
-| 0:00–0:45 | 1 | Promise | “Keep your judgement while agents do more of the building.” | Stay on slide. |
-| 0:45–2:30 | 2 | Personal history | Big red books, CRT, coffee, learning from inside the leaves. | Use the image; no technology chronology. |
-| 2:30–3:45 | 3 | Thesis | “The valuable unit is not the prompt. It is the loop.” | Pause after the final line. |
-| 3:45–5:00 | 4 | Living product | A normal incomplete idea, not a foolish prompt or control experiment. | Optional 15-second app reveal; screenshot is the fallback. |
-| 5:00–6:15 | 5 | Orient | Before: interrogate/plan/approve. Build: implement/review/recover. After: prove/remember. | This is the only process diagram. |
-| 6:15–8:30 | 6 | Interrogate/reframe | Tracking is the mechanism; “What should I do next?” is the outcome. | Open `journey/SESSION-LOG.md` or the starting prompt. |
-| 8:30–10:15 | 7 | Plan | Make intent, system assumptions, decisions and proof visible before code exists. | Show one decisive line per section, not the whole Markdown file. |
-| 10:15–12:00 | 8 | Socratic challenge | Separate creation from challenge. Ask what the plan assumes and what would disprove it. | Open `02-plan-review.md` once the recorded journey creates it. |
-| 12:00–12:50 | 9 | Approval | The agent proposes; the human owns material product, privacy, architecture and scope decisions. | Show the concise approval artifact. |
-| 12:50–15:00 | 10 | Build | Relate each visible product behaviour back to an approved decision. | Open `http://localhost:4180`; screenshot fallback. |
-| 15:00–17:45 | 11 | Challenge/prove | Privacy invariant, three passing tests, and the browser failure that unit tests once missed. | Optional `npm test`; cut first if pacing slips. |
-| 17:45–19:45 | 12 | Remember | The trail records history; the curated spine describes what the system means now. | Show only the privacy invariant file if opening the repo. |
-| 19:45–21:45 | 13 | Systems thinking | Grow the product; strengthen the system. Avoid horizontal/vertical terminology. | No demo. |
-| 21:45–24:00 | 14 | Role shift | More access to engineering, not instant seniority or the end of technical knowledge. | Land curiosity, intentionality, judgement and responsibility. |
-| 24:00–25:30 | 15 | Resolve promise | “What will you build when code is no longer the bottleneck?” | One meta line: the same loop shaped the talk; the application was the product. |
-| 25:30–30:00 | 15 | Questions | Stop presenting. | Keep the closing question visible. |
+| 0:00–0:45 | 1 | Promise: keep judgement while agents do more work. | Nothing. | — |
+| 0:45–2:30 | 2 | Late-90s books, coffee and the fear of another technology shift. Young and old face the unknown from different ends. | Nothing. | “The tools changed. The obligation to understand consequences did not.” |
+| 2:30–3:45 | 3 | “The valuable unit is not the prompt. It is the loop.” Pause. | Nothing. | — |
+| 3:45–5:30 | 4 | A prompt begins the work; the human brings intent, consequences, constraints and unknowns. | `presentation/demo/01-idea-discussion.md` | “The first useful output was not code. It was a better statement of the problem.” |
+| 5:30–7:00 | 5 | The human stays inside the work by shaping, authorising and evaluating. Agents work between checkpoints. | Nothing. | — |
+| 7:00–8:30 | 6 | Do not inspect every token. Spend scarce attention at consequential moments. | Nothing. | — |
+| 8:30–10:15 | 7 | A small, repo-owned Markdown layer makes the gates portable and inspectable. Native planners can sit inside it. | `plans/README.md`, then `presentation/demo/02-plan-v1.md` | “The plan is a proposal, not permission.” |
+| 10:15–12:45 | 8 | The core loop is Socratic: propose, challenge against criteria, revise, then reach a human checkpoint. Keep the challenge bounded; endless debate can drift. | `presentation/demo/03-socratic-plan-review.md`, then `04-approved-plan.md` | “Now the agent has permission to act—but only inside an explicit decision frame.” |
+| 12:45–13:30 | 9 | The agent can propose. It cannot own the product decision, risk appetite or accountability. | Nothing. | — |
+| 13:30–16:15 | 10 | Delegate exploration, drafting, implementation and recovery. Keep intent, risk, approval and outcome. | `presentation/demo/05-build-up.md`, then optionally `app.js` and the app for 20 seconds | “The website is not the punchline. The inspectable chain of decisions is.” |
+| 16:15–19:00 | 11 | Review claims, not every generated line: outcome, boundaries, reality. | `presentation/demo/06-strengthen-across.md`, `data-boundaries.js`, `privacy.test.js`; optionally run `npm test` | “A passing feature is not enough if the system boundary is wrong.” |
+| 19:00–21:15 | 12 | The historical trail records how we got here; the curated spine says what the system means now. Love the metacognition layer. | `docs/spine/README.md`, `docs/spine/INVARIANTS.md`; optionally run `npm run test:spine` | “You are gardening the context the next agent will inherit.” |
+| 21:15–23:00 | 13 | Build up through an outcome; strengthen across with privacy, contracts, tests, observability and standards. One builder can switch contexts that once sat across roles or teams. | `presentation/demo/05-build-up.md` beside `06-strengthen-across.md` if needed. | “This wider field of attention changes the role.” |
+| 23:00–24:30 | 14 | The agentic builder shapes intent, designs boundaries, orchestrates capabilities and evaluates evidence. This is more access to engineering, not instant seniority. | Nothing. | — |
+| 24:30–25:30 | 15 | Resolve the promise. Curiosity, intentionality, judgement and evidence become leverage when code is no longer the bottleneck. | Nothing. | “The valuable unit is the loop.” |
+| 25:30–30:00 | 15 | Questions. Stop presenting. | Open an artifact only in response to a question. | — |
 
-## Demo order
+## Prepared tabs
 
-Start a static server from the repository root before the talk:
+Open these before the talk in this order:
 
-```bash
-npx serve .
-```
+1. the PowerPoint deck;
+2. `presentation/demo/01-idea-discussion.md`;
+3. `plans/README.md` and `presentation/demo/02-plan-v1.md`;
+4. `presentation/demo/03-socratic-plan-review.md` and `04-approved-plan.md`;
+5. `presentation/demo/05-build-up.md`, `app.js`, and the application;
+6. `presentation/demo/06-strengthen-across.md`, `data-boundaries.js`, and `privacy.test.js`;
+7. `docs/spine/README.md` and `docs/spine/INVARIANTS.md`;
+8. a terminal at the repository root with `npm test` and `npm run test:spine` in history.
 
-Keep these ready:
+Use large editor text, hide sidebars, and position each file at the exact excerpt you intend to show. Do not scroll in search of a point.
 
-1. root application in a browser;
-2. `presentation/journey/prompts/00-start.md`;
-3. `presentation/journey/SESSION-LOG.md`;
-4. journey plan, review and approval artifacts after the recorded session;
-5. `docs/spine/INVARIANTS.md`;
-6. a terminal at the repository root with `npm test` ready in history.
+## TAF positioning
 
-Do not open source code unless a question makes one system seam materially useful. If that happens, show `data-boundaries.js` and `privacy.test.js`; they are short enough to explain the privacy contract without a line-by-line review of the application.
+> The Task Automation Framework is a small Markdown-first control layer: intake, proposal, criteria-based challenge, human approval and proof. It is portable across repositories and models, and it leaves an inspectable trail.
+
+Then qualify it:
+
+> Native planning and goal features are useful and can operate inside this lifecycle. The repo-owned layer adds team ownership, tailored gates and durable memory.
+
+And name the limit:
+
+> Markdown volume can impersonate understanding. Use the stronger loop when ambiguity, consequence, risk, hand-off or blast radius warrants it. Keep trivial work trivial.
+
+## Research language
+
+- Say “bounded Socratic challenge is a useful engineering heuristic,” not “agents arguing always improves answers.” Controlled debate and self-refinement research supports critique loops, while later work also shows prolonged debate can drift.
+- Say “plans, structured docs and executable constraints make repositories more legible to agents,” consistent with current agent-harness practice.
+- Say “evaluate the produced outcome and its effects,” not “ignore implementation forever.” Code-level inspection remains available when evidence or risk points you there.
 
 ## Cut ladder
 
 If behind time:
 
-1. do not run `npm test` live;
-2. shorten the app interaction to the next-action recommendation only;
-3. describe the plan without opening the artifact;
-4. reduce the context spine to “current meaning versus historical trail”;
-5. never cut the Socratic challenge, browser-failure lesson, or agentic-builder ending.
+1. do not run either test command;
+2. skip the application reveal;
+3. show only one line from the initial plan;
+4. show the critique and approved plan side-by-side without reading all findings;
+5. describe the spine without leaving the slide;
+6. never cut the Socratic loop, the human gate, build-up/strengthen-across, or the agentic-builder ending.
 
 ## Fallbacks
 
-- Browser problem: use `presentation/assets/apply-forward-final.png`.
-- Terminal problem: state the prepared result—three privacy tests pass—and keep the exact command visible in the guide.
-- Journey artifact missing: use the slide’s selected excerpt and explain that the complete recorded file is in the repository.
-- Time pressure: move directly from slide 11 to slide 14; say the spine and system-foundation slides are available in the repository.
-
-## TAF positioning
-
-Use this balanced wording:
-
-> Native planning and goal features are useful and can run inside this lifecycle. The repo-owned layer adds portability, team ownership, tailored gates, durable context and an inspectable evidence trail.
-
-Then name its limit:
-
-> Markdown volume can impersonate understanding. Use the stronger loop when ambiguity, consequence, risk, hand-off or blast radius warrants it. Keep trivial work trivial.
+- Browser problem: use `presentation/assets/apply-forward-final.png` or simply skip the application.
+- Terminal problem: keep the command visible and state the prepared result: all application and spine checks pass.
+- Editor problem: the deck contains the complete conceptual story; continue without leaving PowerPoint.
+- Time pressure: move from slide 11 directly to slide 14 and say the context-spine and two-modes examples are in the repository.
 
 ## Closing
 
-> Code-level understanding remains useful, but it is no longer sufficient. Curiosity, intentionality, judgement and system thinking let you operate at a larger scale.
+> Code-level understanding remains useful, but it is no longer sufficient. The problem layer is moving upward: toward intent, boundaries, system behaviour, evidence and stewardship.
 
-> The valuable unit is the loop.
+> You do not leave the loop. You decide where the loop needs you—and you curate what the next loop inherits.
