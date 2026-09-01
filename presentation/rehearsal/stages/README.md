@@ -10,7 +10,7 @@ These three historical versions were used to validate timing and recovery before
 
 ## Audience-facing workflow
 
-**Planning:** interrogate → plan → challenge → approve  
+**Planning:** interrogate → plan → challenge → approve
 **Implementation:** build → challenge → prove → remember
 
 This is a deliberately small adaptation of a more formal task-automation lifecycle. The talk does not teach a framework. It demonstrates the few controls that materially change the result:
