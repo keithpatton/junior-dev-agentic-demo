@@ -16,7 +16,7 @@ const activePackage = [
   "AGENTS.md",
   "docs/spine/README.md",
   "plans/README.md",
-  "presentation/Beyond-the-Prompt-JuniorDev.pptx",
+  "presentation/Beyond-the-Prompt-JuniorDev-v9.pptx",
   "presentation/SPEAKER-GUIDE.md",
   "presentation/demo/README.md",
   "presentation/research/CLAIM-MAP.md",
@@ -54,7 +54,7 @@ async function markdownFiles(directory = root) {
   return files;
 }
 
-test("the current application, spine, TAF, and presentation package exist", async () => {
+test("the current application, spine, planning lifecycle, and presentation package exist", async () => {
   for (const relativePath of activePackage) {
     assert.equal(await exists(relativePath), true, `missing ${relativePath}`);
   }
@@ -91,20 +91,26 @@ test("relative Markdown links resolve across the repository", async () => {
   assert.deepEqual(failures, []);
 });
 
-test("the speaker guide carries the complete show and return sequence", async () => {
+test("the speaker guide carries the loop, representative activity, and agentic-builder sequence", async () => {
   const guide = await readFile(path.join(root, "presentation/SPEAKER-GUIDE.md"), "utf8");
-  for (const slide of [4, 7, 8, 9, 10, 11, 12]) {
+  for (const slide of [5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]) {
     assert.match(guide, new RegExp(`\\| [^\\n]*\\| ${slide} \\|`), `missing slide ${slide} cue`);
   }
   for (const phrase of [
-    "The idea changed before the code did.",
+    "Stay in PowerPoint for every context example.",
+    "Do not show source code during the prepared talk.",
+    "I loved what code let me build.",
+    "The human sits at the gates",
+    "bounded adversarial engine",
+    "agentic-loop-example.md",
     "A plan is a proposal, not permission.",
     "Challenge prepares the decision; it does not own it.",
-    "Now the agent has permission to act—inside an explicit decision frame.",
-    "The website is not the punchline.",
-    "A passing feature is not enough if the system boundary is wrong.",
-    "A proved decision helps once. A remembered decision shapes the next change.",
+    "Coverage sufficient? Tests passing?",
+    "Maybe AI was just an elaborate way to get developers to write documentation.",
+    "The strength is in the weave.",
+    "Without the horizontal, you are vibe coding. Without the vertical, you have no product.",
+    "What will you build when code is no longer the bottleneck?",
   ]) {
-    assert.ok(guide.includes(phrase), `missing return cue: ${phrase}`);
+    assert.ok(guide.includes(phrase), `missing delivery contract phrase: ${phrase}`);
   }
 });

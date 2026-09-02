@@ -2,107 +2,118 @@
 
 ## Talk contract
 
-- Total: 30 minutes.
-- Finish the story by 25:30; reserve 4:30 for questions.
+- Total: 30 minutes. Finish the story by 25:30 and reserve 4:30 for questions.
+- Use `Beyond-the-Prompt-JuniorDev-v9.pptx`.
 - This is not a live-coding talk and not a catalogue of agent features.
-- The examples illustrate one emerging way of working: shape, authorise, evaluate, remember.
-- The files under `presentation/demo` are presentation-ready samples, not a claimed verbatim execution history.
-- Use a consistent rhythm: **SLIDE → SHOW ONE PIECE OF EVIDENCE → RETURN**.
-- Never remain outside the deck for more than 60–90 seconds.
-- The application reveal is optional and capped at 20 seconds: “Yes, agents can build software. Whoop-de-doo. The interesting part is how we stayed inside the decisions.”
+- Stay in PowerPoint for every context example. The Markdown-derived evidence is embedded in the deck.
+- Do not show source code during the prepared talk.
+- The application reveal is optional and capped at 20 seconds.
+- The practical takeaway is one loop with three phases: ingest, plan/approve, execute/review.
+- Each phase uses the same bounded adversarial engine: propose, challenge, then accept at the human gate or revise and loop back.
+- One deliberately small Markdown artifact carries the consequential context across all three phases.
+- That loop supports the larger idea: an emerging agentic-builder role in which an engineer operates across a wider system without surrendering judgement.
+- End with the provocations that help a developer stay inside the loop.
 
 ## Opening promise
 
 > You already know an AI can produce code. In the next 25 minutes I’m going to show you a way of working in which agents do more of the work while you keep hold of the decisions, the evidence and the meaning of the system.
 
-## The narrative thread
+## Narrative thread
 
-The talk is not “here are some techniques.” It is a progression in what the developer pays attention to:
+The developer’s attention moves through four ideas:
 
-1. bring intent, consequences, constraints and unknowns;
-2. make a proposal inspectable before work begins;
-3. challenge it against criteria instead of merely chatting with it;
-4. authorise consequential choices;
-5. delegate implementation while retaining the decision frame;
-6. evaluate claims about outcomes, boundaries and reality;
-7. curate the rules and context inherited by the next cycle;
-8. move fluidly between building a feature up and strengthening the system across;
-9. become an agentic builder: more powerful because judgement is applied at system scale.
+1. Code was the material that let us build; we learned its local craft because that was the route to working systems.
+2. Fast, plausible code can now arrive before understanding, so the valuable unit becomes the engineering loop around it.
+3. Agentic builders need both vertical product delivery and horizontal system trust from day one.
+4. Easier production of code makes system-level intent, evidence, ownership, and memory more important—not less.
 
-## Slide → show → return
+## Slide path
 
-| Time | Slide | Say | Show outside the deck | Return line |
-| --- | ---: | --- | --- | --- |
-| 0:00–0:45 | 1 | Promise: keep judgement while agents do more work. | Nothing. | — |
-| 0:45–2:30 | 2 | Late-90s books, coffee and the fear of another technology shift. Young and old face the unknown from different ends. | Nothing. | “The tools changed. The obligation to understand consequences did not.” |
-| 2:30–3:45 | 3 | “The valuable unit is not the prompt. It is the loop.” Pause. | Nothing. | — |
-| 3:45–5:15 | 4 | A prompt begins the work; the human brings intent, consequences, constraints and unknowns. | `presentation/demo/01-idea-discussion.md`: starting request, two questions, reframed outcome | “The idea changed before the code did.” |
-| 5:15–6:45 | 5 | The human stays inside the work by shaping, authorising and evaluating. Agents work between checkpoints. | Nothing. | — |
-| 6:45–8:15 | 6 | Do not inspect every token. Spend scarce attention at consequential moments. | Nothing. | — |
-| 8:15–9:45 | 7 | A small, repo-owned Markdown layer makes the gates portable and inspectable. Native planners can sit inside it. | `plans/README.md` at “Planning loop”, then `presentation/demo/02-plan-v1.md` at “Assumptions requiring challenge” | “A plan is a proposal, not permission.” |
-| 9:45–12:15 | 8 | The core loop is Socratic: propose, challenge against criteria, revise, then reach a human checkpoint. Keep the challenge bounded; endless debate can drift. | `presentation/demo/03-socratic-plan-review.md`: one complete finding only | “Challenge prepares the decision; it does not own it.” |
-| 12:15–13:15 | 9 | The agent can propose. It cannot own the product decision, risk appetite or accountability. | `presentation/demo/04-approved-plan.md`: human decision and conditions | “Now the agent has permission to act—inside an explicit decision frame.” |
-| 13:15–15:15 | 10 | Delegate exploration, drafting, implementation and recovery. Keep intent, risk, approval and outcome. | `presentation/demo/05-build-up.md`, `app.js` at `chooseNext()`, then the app for at most 20 seconds | “The website is not the punchline. The inspectable chain of decisions is.” |
-| 15:15–17:30 | 11 | Review claims, not every generated line: outcome, boundaries, reality. | One editor split: `data-boundaries.js` beside `privacy.test.js`; optionally run `npm test` | “A passing feature is not enough if the system boundary is wrong.” |
-| 17:30–20:00 | 12 | The task trail records how meaning changed; the curated spine says what the system means now. Love the metacognition layer. | `presentation/demo/07-proof-and-memory.md`, then `docs/spine/INVARIANTS.md`; optionally run `npm run test:spine` | “A proved decision helps once. A remembered decision shapes the next change.” |
-| 20:00–22:15 | 13 | Build up through an outcome; strengthen across with privacy, contracts, tests, observability and standards. One builder can switch contexts that once sat across roles or teams. | Nothing—point back to the two examples already shown. | “This wider field of attention changes the role.” |
-| 22:15–24:00 | 14 | The agentic builder shapes intent, designs boundaries, orchestrates capabilities and evaluates evidence. This is more access to engineering, not instant seniority. | Nothing. | — |
-| 24:00–25:30 | 15 | Resolve the promise. Curiosity, intentionality, judgement and evidence become leverage when code is no longer the bottleneck. | Nothing. | “The valuable unit is the loop.” |
-| 25:30–30:00 | 15 | Questions. Stop presenting. | Open an artifact only in response to a question. | — |
+| Time | Slide | Purpose and cue |
+| --- | ---: | --- |
+| 0:00–0:40 | 1 | Promise: this is about becoming a stronger engineer, not producing more code. |
+| 0:40–2:15 | 2 | “I loved what code let me build.” Tabs, naming, architecture, SOLID, and algorithms mattered because craft was the route from an idea to a system. Local mechanics are becoming cheaper; the differentiator moves toward system-level intent, boundaries, interactions, and evidence. |
+| 2:15–3:15 | 3 | Name the risk: AI can give you working code before understanding. Fluency is not evidence. |
+| 3:15–4:00 | 4 | Pause on the thesis: “The valuable unit is not the prompt. It is the loop.” Frame the practical loop as the operating discipline of an emerging agentic builder. |
+| 4:00–5:15 | 5 | Build the whole loop left to right: ingest, plan/approve, execute/review. The human sits at the gates through intent, decisions, evidence, and memory; the result feeds the next loop. |
+| 5:15–6:30 | 6 | Introduce the adversarial engine inside every phase: propose, challenge, then accept at the human gate or revise and loop back. Use the restored Socratic visual to stress bounded challenge, not endless debate. |
+| 6:30–7:30 | 7 | Introduce ingestion: interrogate the outcome, audience, sensitivity, and unknowns before automating anything. |
+| 7:30–8:45 | 8 | Show a representative ingestion conversation: the human brings an initial ask, the agent challenges what is missing, and both arrive at an outcome ready to plan. This is a pattern, not a literal transcript. |
+| 8:45–10:00 | 9 | Introduce planning/approval as one decision loop. “A plan is a proposal, not permission.” |
+| 10:00–11:30 | 10 | Show a representative agentic trace: the primary agent proposes, a challenge agent tests assumptions, the plan is refined, and the human approves, redirects, or stops. “Challenge prepares the decision; it does not own it.” |
+| 11:30–12:45 | 11 | Introduce execution/review: build inside the approved frame, then review outcome, boundaries, and reality. |
+| 12:45–14:00 | 12 | Mirror the planning trace for implementation: execution agent, challenge agent, fix issues, then the human deployment gate. Ask: “Coverage sufficient? Tests passing?” The badge lands on “Ready to deploy?” |
+| 14:00–15:15 | 13 | Land the app as the visible output of the whole loop. Agents performed the labour and challenge; the human retained the gates. Optional 20-second reveal: “Yes, agents can build software. Whoop-de-doo. The interesting part is how we stayed inside the decisions.” |
+| 15:15–16:30 | 14 | Name the human decision frame: agents may explore, draft, implement, compare, and recover; the human retains intent, risk, approval, and outcome. |
+| 16:30–18:00 | 15 | “Love the context more than the code.” Consequential judgement must survive the current prompt in a curated context spine. Optional dry aside: “Maybe AI was just an elaborate way to get developers to write documentation.” |
+| 18:00–19:15 | 16 | Introduce the vertical mind: outcome, flow, behaviour, feedback, usable product. Without vertical delivery, there is no product. |
+| 19:15–20:45 | 17 | Introduce the horizontal mind through explicit foundational threads: architectural alignment, standardisation, observability, testing approaches, and security alignment. Agentic work exposes these concerns immediately. |
+| 20:45–22:15 | 18 | “The strength is in the weave.” Combine both axes into one capability, then land the provocation: “Without the horizontal, you are vibe coding. Without the vertical, you have no product.” |
+| 22:15–25:30 | 19 | Return to the builder before the tree: “What will you build when code is no longer the bottleneck?” Read the compact provocations—stay curious, keep intent visible, own the judgement, demand evidence, leave memory—then ask for questions. |
+| 25:30–30:00 | 19 | Stop presenting and take questions. |
 
-## Prepared tabs
+## Calibrating the craft claim
 
-Open these before the talk in this order:
+The point is not that implementation quality or algorithmic correctness has literally been solved. Use this distinction:
 
-1. the PowerPoint deck;
-2. `presentation/demo/01-idea-discussion.md`;
-3. `plans/README.md` and `presentation/demo/02-plan-v1.md`;
-4. `presentation/demo/03-socratic-plan-review.md` and `04-approved-plan.md`;
-5. `presentation/demo/05-build-up.md`, `app.js` at `chooseNext()`, and the application;
-6. an editor split with `data-boundaries.js` and `privacy.test.js`;
-7. `presentation/demo/07-proof-and-memory.md` and `docs/spine/INVARIANTS.md`;
-8. a terminal at the repository root with `npm test` and `npm run test:spine` in history.
+> The scarcity is shifting. AI is increasingly capable at local mechanics and familiar correctness. When production becomes cheap, your leverage moves toward describing and judging the system: what it is for, how its parts interact, where its boundaries are, and what evidence makes it trustworthy.
 
-Use large editor text, hide sidebars, and position each file at the exact excerpt you intend to show. Do not scroll in search of a point.
+This keeps code in its proper place: still a vital building material, but no longer the whole definition of engineering competence.
 
-## TAF positioning
+## The two-axis explanation
 
-> The Task Automation Framework is a small Markdown-first control layer: intake, proposal, criteria-based challenge, human approval and proof. It is portable across repositories and models, and it leaves an inspectable trail.
+Use “vertical” and “horizontal” as fields of engineering attention, not ranks or job titles.
 
-Then qualify it:
+- Vertical work builds upward through one outcome until a user has a product.
+- Horizontal work strengthens across outcomes so privacy, contracts, evidence, recovery, and context hold together.
+- Specialists still matter. The claim is that an agentic builder must notice and route both concerns immediately, not personally possess every specialist judgement.
 
-> Native planning and goal features are useful and can operate inside this lifecycle. The repo-owned layer adds team ownership, tailored gates and durable memory.
+The landing line is:
 
-And name the limit:
+> Without the horizontal, you are vibe coding. Without the vertical, you have no product.
 
-> Markdown volume can impersonate understanding. Use the stronger loop when ambiguity, consequence, risk, hand-off or blast radius warrants it. Keep trivial work trivial.
+## Prepared stage state
+
+1. Open the v9 PowerPoint and enter full-screen presentation mode.
+2. If using the app reveal, pre-open the application at the intended state in one browser tab.
+3. Keep the repository and terminal closed unless a question specifically warrants them.
+
+The practical sequence alternates between a simple phase model and a representative view of the activity. Slides 8, 10, and 12 make the interaction visible without leaving PowerPoint. The supporting `agentic-loop-example.md` artifact remains available only if a question benefits from inspecting the longer form.
 
 ## Research language
 
-- Say “bounded Socratic challenge is a useful engineering heuristic,” not “agents arguing always improves answers.” Controlled debate and self-refinement research supports critique loops, while later work also shows prolonged debate can drift.
-- Say “plans, structured docs and executable constraints make repositories more legible to agents,” consistent with current agent-harness practice.
-- Say “evaluate the produced outcome and its effects,” not “ignore implementation forever.” Code-level inspection remains available when evidence or risk points you there.
+- Say “bounded Socratic challenge is a useful engineering heuristic,” not “agents arguing always improves answers.” Critique can refine a proposal, while prolonged debate can also drift.
+- Say “plans, structured docs, and executable constraints make repositories more legible to agents.”
+- Say “review claims first and follow risk into the code,” not “code no longer matters.” Implementation understanding remains available and necessary where risk and evidence point.
+- Say “both axes require attention,” not “one developer replaces every specialist.”
 
 ## Cut ladder
 
 If behind time:
 
-1. do not run either test command;
-2. skip the application reveal;
-3. show only one line from the initial plan;
-4. show the critique and approved plan side-by-side without reading all findings;
-5. describe the spine without leaving the slide;
-6. never cut the Socratic loop, the human gate, build-up/strengthen-across, or the agentic-builder ending.
+1. skip the application reveal;
+2. read only the highlighted column on slides 5, 9, and 11;
+3. compress slides 6 and 7 into one minute together;
+4. describe the three proof layers without examples;
+5. never cut the human gate, the two-axis synthesis, or the final provocations.
 
 ## Fallbacks
 
-- Browser problem: use `presentation/assets/apply-forward-final.png` or simply skip the application.
-- Terminal problem: keep the command visible and state the prepared result: all application and spine checks pass.
-- Editor problem: the deck contains the complete conceptual story; continue without leaving PowerPoint.
-- Time pressure: move from slide 11 directly to slide 14 and say the context-spine and two-modes examples are in the repository.
+- Browser problem: remain on slide 13; its authentic screenshot is enough.
+- PowerPoint animation or display problem: all essential meaning is static on each slide.
+- Time pressure: move from slide 15 to slide 18 and state both axes in one sentence.
+- Question about implementation: answer conceptually first; open a repository artifact only if it materially improves the answer.
 
-## Closing
+## Closing provocations
 
-> Code-level understanding remains useful, but it is no longer sufficient. The problem layer is moving upward: toward intent, boundaries, system behaviour, evidence and stewardship.
+Leave these visible while taking questions:
 
-> You do not leave the loop. You decide where the loop needs you—and you curate what the next loop inherits.
+1. Stay curious: what are we creating, and what assumption could make it wrong?
+2. Keep intent visible as work moves between humans and agents.
+3. Own the judgement: which decision is still yours?
+4. Demand evidence that could disprove “done.”
+5. Leave memory that makes the next loop stronger.
+
+> What will you build when code is no longer the bottleneck?
+
+> You do not leave the loop. You decide where the loop needs you—and what the next loop inherits.

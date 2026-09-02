@@ -17,8 +17,8 @@ Adding free-text notes therefore created a cross-cutting privacy risk.
 
 ## Structural change
 
-Open [`../../data-boundaries.js`](../../data-boundaries.js).
+The supporting implementation is in [`../../data-boundaries.js`](../../data-boundaries.js), with the invariant exercised by [`../../privacy.test.js`](../../privacy.test.js). These are references for questions, not part of the prepared on-stage path.
 
-Both boundaries now receive an explicit safe projection rather than the complete object. Open [`../../privacy.test.js`](../../privacy.test.js) to show that one invariant protects both seams.
+Both boundaries receive an explicit safe projection rather than the complete object, so one invariant protects both seams.
 
 This is “strengthening across”: a foundation—privacy, contracts, tests, observability, context—makes many current and future feature slices safer.

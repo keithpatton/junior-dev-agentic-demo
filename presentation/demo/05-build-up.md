@@ -20,8 +20,8 @@ status change updates the recommendation
 
 This is “building up”: a user-facing capability runs through data, decision logic, rendering, and interaction.
 
-## Code view
+## Supporting implementation
 
-Open the recommendation logic in [`../../app.js`](../../app.js), then show the running application for no more than 20 seconds.
+The deterministic recommendation logic lives in [`../../app.js`](../../app.js). It is a reference for questions, not part of the prepared on-stage path. The running application may be shown for no more than 20 seconds near the end of the deck.
 
 The interesting question is not whether the agent could produce the interface. It is whether the product behaviour corresponds to an approved outcome and remains legible enough to challenge.

@@ -14,7 +14,7 @@ The JuniorDev Auckland talk **Beyond the Prompt** is packaged separately under [
 
 Only three presentation surfaces are needed:
 
-1. [`presentation/Beyond-the-Prompt-JuniorDev.pptx`](presentation/Beyond-the-Prompt-JuniorDev.pptx) — the slides;
+1. [`presentation/Beyond-the-Prompt-JuniorDev-v9.pptx`](presentation/Beyond-the-Prompt-JuniorDev-v9.pptx) — the final 19-slide delivery deck;
 2. [`presentation/SPEAKER-GUIDE.md`](presentation/SPEAKER-GUIDE.md) — timings, exact show/return cues, cuts, and fallbacks;
 3. [`presentation/demo/`](presentation/demo/) — the prepared Markdown, code, proof, and context excerpts shown between slides.
 
@@ -43,7 +43,7 @@ Then open the local URL printed by the server. The product helps a junior develo
 │   └── spine/                         # current product and system meaning
 ├── plans/                             # reusable Task Automation Framework
 └── presentation/
-    ├── Beyond-the-Prompt-JuniorDev.pptx
+    ├── Beyond-the-Prompt-JuniorDev-v9.pptx
     ├── SPEAKER-GUIDE.md
     ├── demo/                          # the only on-stage evidence path
     ├── assets/                        # slide imagery and screenshot fallback
